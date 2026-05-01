@@ -6,8 +6,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const Navbar = () => {
   // Style for main navbar container
   const navbarStyle = {
-    backgroundColor: '#fff',
-    position: 'sticky',
+    // backgroundColor: '#fff',
+    // position: 'sticky',
     top: 0,
     zIndex: 1000,
   };
@@ -75,22 +75,13 @@ const Navbar = () => {
               component="img"
               src={require('../Assets/Logo.png')}
               alt="RONO Logo"
-              sx={{ height: 40, width: 'auto', display: 'block' }}
-            />
-            <Typography
-              variant="h6"
-              component="span"
-              sx={{
-                fontFamily: 'Inter',
-                fontWeight: 700,
-                fontSize: 24,
-                color: '#000',
-                letterSpacing: '-0.5px',
-                textTransform: 'lowercase'
+              sx={{ 
+                width: '127px', 
+                height: '33.14px', 
+                display: 'block',
+                opacity: 1
               }}
-            >
-              rono
-            </Typography>
+            />
           </Box>
 
           {/* Middle - Navigation links */}

@@ -7,14 +7,14 @@ const Trusted = () => {
   const containerStyle = {
     py: { xs: 4, md: 8 },
     px: { xs: 2, md: 4 },
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#ffffff',
   };
 
   // Style for section heading
   const headingStyle = {
     fontFamily: 'RM Neue',
-    fontWeight: 600,
-    fontSize: { xs: 28, md: 36 },
+    fontWeight: 700,
+    fontSize: { xs: 32, md: 48 },
     color: '#000',
     mb: 3,
     textAlign: 'left',

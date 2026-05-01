@@ -5,8 +5,12 @@ import { Box, Typography, Container, Button } from '@mui/material';
 import herodright from '../Assets/herodright.png';
 import herodleft from '../Assets/Herodleft (1).png';
 
-// NEW MOBILE IMAGE
+// MAIN MOBILE IMAGE
 import mobileImage from '../Assets/Heromobile1.png';
+
+// FLOATING IMAGES
+import Mobilefloat1 from '../Assets/Mobilefloat1.png';
+import Mobilefloat2 from '../Assets/Mobilefloat2.png';
 
 const Hero = () => {
 
@@ -18,7 +22,7 @@ const Hero = () => {
 
     minHeight: '100vh',
 
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#ffffff',
 
     overflow: 'hidden',
 
@@ -57,14 +61,15 @@ const Hero = () => {
     zIndex: 2,
 
     marginBottom: {
-      xs: '40px',
-      md: '70px',
+      xs: '10px',
+      md: '15px',
     },
   };
 
   // HEADING
   const headingStyle = {
-    fontWeight: 700,
+    fontFamily: 'RM Neue',
+    fontWeight: 500,
 
     fontSize: {
       xs: '40px',
@@ -77,15 +82,21 @@ const Hero = () => {
     color: '#000',
 
     mb: 2,
+
+    whiteSpace: 'nowrap',
+
+    letterSpacing: '-0.5px',
   };
 
   // ORANGE TEXT
   const orangeTextStyle = {
+    fontFamily: 'RM Neue',
     color: '#F25828',
   };
 
   // SUBHEADING
   const subheadingStyle = {
+    fontFamily: 'RM Neue',
     fontSize: {
       xs: '16px',
       md: '20px',
@@ -93,7 +104,7 @@ const Hero = () => {
 
     color: '#555',
 
-    lineHeight: 1.6,
+    // lineHeight: 1.6,
 
     mb: 4,
   };
@@ -113,6 +124,7 @@ const Hero = () => {
 
   // PRIMARY BUTTON
   const buttonStyle = {
+    fontFamily: 'RM Neue',
     background:
       'linear-gradient(98.76deg, #3C60B6 -45.06%, #3C60B6 34.8%, #4EB2CE 114.24%)',
 
@@ -138,6 +150,7 @@ const Hero = () => {
 
   // SECONDARY BUTTON
   const secondaryButtonStyle = {
+    fontFamily: 'RM Neue',
     backgroundColor: 'transparent',
 
     color: '#000',
@@ -155,15 +168,12 @@ const Hero = () => {
     height: '50px',
 
     borderRadius: '50px',
-
-    '&:hover': {
-      backgroundColor: '#000',
-      color: '#fff',
-    },
   };
 
   // MOBILE IMAGE CONTAINER
   const mobileImagesContainerStyle = {
+    position: 'relative',
+
     display: 'flex',
 
     justifyContent: 'center',
@@ -175,7 +185,7 @@ const Hero = () => {
     zIndex: 2,
   };
 
-  // SINGLE MOBILE IMAGE STYLE
+  // MAIN MOBILE IMAGE
   const mobileImageStyle = {
     width: {
       xs: '100%',
@@ -188,6 +198,79 @@ const Hero = () => {
     height: 'auto',
 
     objectFit: 'contain',
+
+    mt: {
+      xs: '20px',
+      md: '40px',
+    },
+  };
+
+  // LEFT FLOATING IMAGE
+  const mobileFloatLeftStyle = {
+    position: 'absolute',
+
+    left: {
+      xs: '-10px',
+      sm: '20px',
+      md: '40px',
+    },
+
+    top: {
+      xs: '45%',
+      md: '66%',
+    },
+
+    transform: 'translateY(-50%)',
+
+    width: {
+      xs: '110px',
+      sm: '150px',
+      md: '260px',
+    },
+
+    height: 'auto',
+
+    objectFit: 'contain',
+
+    zIndex: 5,
+
+    filter: 'none',
+
+    boxShadow: 'none',
+  };
+
+  // RIGHT FLOATING IMAGE
+  const mobileFloatRightStyle = {
+    position: 'absolute',
+
+    right: {
+      xs: '-10px',
+      sm: '20px',
+      md: '40px',
+    },
+
+    top: {
+      xs: '45%',
+      md: '70%',
+    },
+
+    transform: 'translateY(-50%)',
+
+    width: {
+      xs: '110px',
+      sm: '150px',
+      md: '260px',
+    },
+
+    height: 'auto',
+
+    objectFit: 'contain',
+
+    zIndex: 5,
+
+    filter: 'none',
+
+    boxShadow: 'none',
   };
 
   // LEFT FLOATING ICON
@@ -196,7 +279,7 @@ const Hero = () => {
 
     top: {
       xs: '58%',
-      md: '48%',
+      md: '38%',
     },
 
     left: {
@@ -213,7 +296,7 @@ const Hero = () => {
 
     top: {
       xs: '58%',
-      md: '48%',
+      md: '28%',
     },
 
     right: {
@@ -250,7 +333,7 @@ const Hero = () => {
   };
 
   return (
-
+    <Container maxWidth= 'xl'>
     <Box sx={heroStyle}>
 
       <Container maxWidth="xl">
@@ -266,7 +349,7 @@ const Hero = () => {
           </Typography>
 
           <Typography sx={subheadingStyle}>
-            At Rono we offer tools that scale your business rapidly
+            at rono we offer tools that scale your business rapidly
           </Typography>
 
           {/* BUTTONS */}
@@ -284,14 +367,31 @@ const Hero = () => {
 
         </Box>
 
-        {/* SINGLE MOBILE IMAGE */}
+        {/* MOBILE IMAGE SECTION */}
         <Box sx={mobileImagesContainerStyle}>
 
+          {/* MAIN MOBILE IMAGE */}
           <Box
             component="img"
             src={mobileImage}
             alt="Hero Mobile"
             sx={mobileImageStyle}
+          />
+
+          {/* LEFT FLOATING IMAGE */}
+          <Box
+            component="img"
+            src={Mobilefloat1}
+            alt="Floating Left"
+            sx={mobileFloatLeftStyle}
+          />
+
+          {/* RIGHT FLOATING IMAGE */}
+          <Box
+            component="img"
+            src={Mobilefloat2}
+            alt="Floating Right"
+            sx={mobileFloatRightStyle}
           />
 
         </Box>
@@ -323,6 +423,7 @@ const Hero = () => {
       </Container>
 
     </Box>
+    </Container>
   );
 };
 

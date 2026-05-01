@@ -1,76 +1,257 @@
 import React from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
 
-const Contact = () => {
-    // Style for main container
-    const containerStyle = {
-        py: { xs: 6, md: 10 },
-        px: { xs: 2, md: 4 },
-        backgroundColor: '#f8f9fa',
-    };
+import {
+  Box,
+  Typography,
+  Button,
+  Container
+} from '@mui/material';
 
-    // Style for content wrapper
-    const contentWrapperStyle = {
-        maxWidth: '800px',
-        margin: '0',
-        textAlign: 'left',
-    };
+import Contactimg from '../Assets/Contactimg.png';
 
-    // Style for h1 heading
-    const headingStyle = {
-        fontFamily: 'RM Neue',
-        fontWeight: 600,
-        fontSize: { xs: 32, md: 40 },
-        color: '#333',
-        mb: 4,
-        textAlign: 'left',
-    };
+const Contact= () => {
 
-    // Style for body text
-    const bodyStyle = {
-        fontFamily: 'RM Neue',
-        fontWeight: 400,
-        fontSize: { xs: 16, md: 18 },
-        color: '#666',
-        lineHeight: 1.8,
-        mb: 6,
-        textAlign: 'left',
-    };
+  return (
+    <Container maxWidth="xl">
+    <Box
+      sx={{
+        width: '100%',
 
-    // Style for button
-    const buttonStyle = {
-        fontFamily: 'RM Neue',
-        fontWeight: 600,
-        fontSize: 16,
-        backgroundColor: '#1976d2',
-        color: '#fff',
-        padding: '12px 32px',
-        borderRadius: '8px',
-        textTransform: 'none',
-        '&:hover': {
-            backgroundColor: '#1565c0',
+        px: {
+          xs: 2,
+          md: 8,
         },
-    };
 
-    return (
-        <Box sx={containerStyle}>
-            <Container maxWidth="lg">
-                <Box sx={contentWrapperStyle}>
-                    <Typography variant="h1" sx={headingStyle}>
-                        Ready to Transform Your Workforce Management?
-                    </Typography>
+        py: {
+          xs: 6,
+          md: 10,
+        },
 
-                    <Typography variant="body1" sx={bodyStyle}>
-                        Join hundreds of businesses using RONO HUB to streamline operations and scale faster.
-                    </Typography>
+        bgcolor: '#fff',
+      }}
+    >
 
-                    <Button variant="contained" sx={buttonStyle}>
-                        Contact Us
-                    </Button>
-                </Box>
-            </Container>
+      <Box
+        sx={{
+          position: 'relative',
+
+          background:
+            'linear-gradient(197.65deg, #F25828 36.25%, #F25828 36.48%, #F7CE25 82.13%)',
+
+          borderRadius: '32px',
+
+          px: {
+            xs: 3,
+            md: 8,
+          },
+
+          pt: {
+            xs: 4,
+            md: 8,
+          },
+
+          pb: {
+            xs: 0,
+            md: 8,
+          },
+
+          display: 'flex',
+
+          flexDirection: {
+            xs: 'column',
+            md: 'row',
+          },
+
+          alignItems: 'center',
+
+          justifyContent: 'space-between',
+
+          overflow: {
+            xs: 'hidden',
+            md: 'visible',
+          },
+
+          minHeight: {
+            xs: 'auto',
+            md: '360px',
+          },
+        }}
+      >
+
+        {/* LEFT CONTENT */}
+        <Box
+          sx={{
+            maxWidth: {
+              xs: '100%',
+              md: '55%',
+            },
+
+            zIndex: 2,
+
+            textAlign: {
+              xs: 'center',
+              md: 'left',
+            },
+
+            mb: {
+              xs: 2,
+              md: 0,
+            },
+
+            mt: {
+              xs: 2,
+              md: 0,
+            },
+          }}
+        >
+
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 700,
+
+              fontSize: {
+                xs: 32,
+                md: 48,
+              },
+
+              lineHeight: 1.2,
+
+              letterSpacing: '-1px',
+
+              color: '#fff',
+
+              mb: 2,
+            }}
+          >
+            Ready to Transform Your Workforce Management?
+          </Typography>
+
+          <Typography
+            sx={{
+              fontSize: {
+                xs: 14,
+                md: 16,
+              },
+
+              lineHeight: 1.6,
+
+              color: 'rgba(255,255,255,0.9)',
+
+              mb: 4,
+
+              maxWidth: '90%',
+
+              mx: {
+                xs: 'auto',
+                md: 0,
+              },
+            }}
+          >
+            Join hundreds of businesses using RONO HUB to streamline
+            operations and scale faster.
+          </Typography>
+
+          <Button
+            variant="contained"
+            sx={{
+              bgcolor: '#fff',
+
+              color: '#000',
+
+              textTransform: 'none',
+
+              px: 4,
+
+              py: 1.5,
+
+              fontSize: 16,
+
+              fontWeight: 500,
+
+              borderRadius: '50px',
+
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+
+              '&:hover': {
+                bgcolor: '#f5f5f5',
+              },
+            }}
+          >
+            Contact Us
+          </Button>
+
         </Box>
-    );
+
+        {/* RIGHT IMAGE */}
+        <Box
+          sx={{
+            position: {
+              xs: 'relative',
+              md: 'absolute',
+            },
+
+            right: {
+              xs: 'auto',
+              md: '8%',
+            },
+
+            bottom: 0,
+
+            top: {
+              xs: '20px',
+              md: 'auto',
+            },
+
+            width: {
+              xs: '60%',
+              md: 'auto',
+            },
+
+            height: {
+              xs: 'auto',
+              md: '115%',
+            },
+
+            maxHeight: {
+              xs: 'none',
+              md: 500,
+            },
+
+            zIndex: 1,
+
+            display: 'flex',
+
+            justifyContent: 'center',
+
+            alignItems: 'flex-end',
+          }}
+        >
+
+          <Box
+            component="img"
+            src={Contactimg}
+            alt="Contact"
+            sx={{
+              height: '100%',
+
+              width: 'auto',
+
+              objectFit: 'contain',
+
+              objectPosition: 'bottom',
+
+              display: 'block',
+            }}
+          />
+
+        </Box>
+
+      </Box>
+
+    </Box>
+    </Container>
+  );
 };
 
 export default Contact;

@@ -4,9 +4,9 @@ import { Box, Typography, Container } from '@mui/material';
 const Businesspage = () => {
     // Style for main container
     const containerStyle = {
-        py: { xs: 6, md: 10 },
+        py: { xs: 3, md: 5 },
         px: { xs: 2, md: 4 },
-        backgroundColor: '#f8f9fa',
+        backgroundColor: '#ffffff',
     };
 
     // Style for content wrapper
@@ -34,6 +34,7 @@ const Businesspage = () => {
         color: '#666',
         lineHeight: 1.8,
         mb: 4,
+        whiteSpace: 'nowrap',
     };
 
     
@@ -42,7 +43,7 @@ const Businesspage = () => {
             <Container maxWidth="lg">
                 <Box sx={contentWrapperStyle}>
                     <Typography variant="h1" sx={headingStyle}>
-                        simplified solution for
+                        Simplified solution for<br/>
                         complex business needs 
                   </Typography>
 

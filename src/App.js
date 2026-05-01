@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -15,16 +14,19 @@ import Transforming from "./Components/Tranforming";
 import Businesspage from "./Components/Businessmodel/Businesspage";
 
 import Recruiter from "./Components/Businessmodel/Recruiter";
+import Hrms from "./Components/Businessmodel/Hrms.js"
 
-import HRMS from "./Components/Businessmodel/Hrms";
 import Jobs from "./Components/Businessmodel/Jobs";
+
+
 import LMS from "./Components/Businessmodel/Lms";
-
+import Lr from "./Components/Businessmodel/Lr";
+import Feature from "./Components/Feature.js";
 import Insights from "./Components/Insights";
-
 import FAQ from "./Components/FAQ";
-
 import Contact from "./Common/Contact";
+import Footer from "./Common/Footer.js"
+
 
 
 
@@ -48,16 +50,18 @@ function App() {
 
       <Recruiter/>
 
-      <HRMS/>
+      <Hrms/>
       <Jobs/>
-<LMS/>
+       <LMS/>
+       <Lr/>
+       <Feature/>
+
       <Insights/>
-
       <hr/>
-
       <FAQ/>
 
       <Contact/>
+      <Footer/>
 
     </Router>
 

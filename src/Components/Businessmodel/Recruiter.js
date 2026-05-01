@@ -15,9 +15,9 @@ const Recruiter = () => {
 
   // MAIN SECTION
   const sectionStyle = {
-    py: { xs: 6, md: 10 },
+    py: { xs: 3, md: 5 },
     px: { xs: 2, md: 4 },
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#ffffff',
   };
 
   // MAIN WRAPPER
@@ -58,20 +58,22 @@ const Recruiter = () => {
     },
   };
 
-  // HEADING
+ // HEADING
   const headingStyle = {
-    fontWeight: 700,
-
+    fontFamily: 'RM Neue',
+    fontWeight: 600,
+    fontStyle: 'SemiBold',
     fontSize: {
-      xs: '34px',
-      md: '46px',
+      xs: '32px',
+      md: '40px',
     },
 
     color: '#111',
 
     mb: 3,
 
-    lineHeight: 1.2,
+    lineHeight: '32px',
+    letterSpacing: '-1%',
   };
 
   // BODY
@@ -135,7 +137,7 @@ const Recruiter = () => {
 
   // LEFT BOX
   const candidateBoxStyle = {
-    width: '210px',
+    width: '280px',
 
     height: '48px',
 
@@ -243,9 +245,9 @@ const Recruiter = () => {
               sx={{
                 position: 'absolute',
 
-                top: '70px',
+                top: '85px',
 
-                left: '-10px',
+                left: '-20px',
 
                 display: 'flex',
 

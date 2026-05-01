@@ -16,7 +16,7 @@ const Jobs = () => {
   const sectionStyle = {
     py: { xs: 6, md: 10 },
     px: { xs: 2, md: 4 },
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#ffffff',
   };
 
   // MAIN WRAPPER
@@ -57,20 +57,22 @@ const Jobs = () => {
     },
   };
 
-  // HEADING
+ // HEADING
   const headingStyle = {
-    fontWeight: 700,
-
+    fontFamily: 'RM Neue',
+    fontWeight: 600,
+    fontStyle: 'SemiBold',
     fontSize: {
-      xs: '34px',
-      md: '46px',
+      xs: '32px',
+      md: '40px',
     },
 
     color: '#111',
 
     mb: 3,
 
-    lineHeight: 1.2,
+    lineHeight: '32px',
+    letterSpacing: '-1%',
   };
 
   // BODY
@@ -88,6 +90,7 @@ const Jobs = () => {
 
     mb: 4,
   };
+
 
   // BUTTON
   const buttonStyle = {
