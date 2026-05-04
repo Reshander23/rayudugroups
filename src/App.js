@@ -1,75 +1,36 @@
-
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles/global.css';
 
 import Navbar from "./Common/Navbar";
+import Footer from "./Common/Footer";
 
-import Hero from "./Components/Hero";
-
-import Trusted from "./Components/Trusted";
-
-import Transforming from "./Components/Tranforming";
-
-import Businesspage from "./Components/Businessmodel/Businesspage";
-
-import Recruiter from "./Components/Businessmodel/Recruiter";
-import Hrms from "./Components/Businessmodel/Hrms.js"
-
-import Jobs from "./Components/Businessmodel/Jobs";
-
-
-import LMS from "./Components/Businessmodel/Lms";
-import Lr from "./Components/Businessmodel/Lr";
-import Feature from "./Components/Feature.js";
-import Insights from "./Components/Insights";
-import FAQ from "./Components/FAQ";
-import Contact from "./Common/Contact";
-import Footer from "./Common/Footer.js"
-
-
-
-
-
+import Mainpages from "./Pages/Mainpages";
+import Aboutpage from "./Pages/Aboutpage";
+import Contactpage from "./Pages/Contactpage";
+import Blogpage from "./Pages/Blog/Blogpage";
+import Blogdetails from "./Pages/Blog/Blogdetails";
+import Newspage from "./Pages/News/Newspage";
+import Newsdetails from "./Pages/News/Newsdetails";
 
 function App() {
-
   return (
-
     <Router>
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<Mainpages />} />
+        <Route path="/about" element={<Aboutpage />} />
+        <Route path="/contact" element={<Contactpage />} />
+        <Route path="/blogs" element={<Blogpage />} />
+        <Route path="/blog/:id" element={<Blogdetails />} />
+        <Route path="/news" element={<Newspage />} />
+        <Route path="/news/:id" element={<Newsdetails />} />
+      </Routes>
 
-      <Navbar/>
-
-      <Hero/><br/>
-
-      <Trusted/>
-
-      <Transforming/>
-
-      <Businesspage/>
-
-      <Recruiter/>
-
-      <Hrms/>
-      <Jobs/>
-       <LMS/>
-       <Lr/>
-       <Feature/>
-
-      <Insights/>
-      <hr/>
-      <FAQ/>
-
-      <Contact/>
-      <Footer/>
-
+      <Footer />
     </Router>
-
   );
-
 }
 
-
-
 export default App;
-

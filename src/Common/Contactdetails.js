@@ -1,25 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   Box,
   Typography,
-  Button,
-  Container
+  Button
 } from '@mui/material';
 
 import Contactimg from '../Assets/Contactimg.png';
 
 const Contact= () => {
+  const navigate = useNavigate();
 
   return (
-    <Container maxWidth="xl">
     <Box
       sx={{
         width: '100%',
 
         px: {
           xs: 2,
-          md: 8,
+          md: 4,
         },
 
         py: {
@@ -154,6 +154,7 @@ const Contact= () => {
 
           <Button
             variant="contained"
+            onClick={() => navigate('/contact')}
             sx={{
               bgcolor: '#fff',
 
@@ -250,7 +251,6 @@ const Contact= () => {
       </Box>
 
     </Box>
-    </Container>
   );
 };
 

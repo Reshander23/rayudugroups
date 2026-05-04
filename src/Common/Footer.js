@@ -209,17 +209,17 @@ const Footer = () => {
             </Typography>
 
             <Stack spacing={1.5} sx={{ mb: 4 }}>
-              <Stack direction="row" spacing={1.25} alignItems="center">
+              <Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}>
                 <EmailRoundedIcon sx={{ color: "#000000", fontSize: 20 }} />
                 <Typography sx={{ ...footerTextSx, fontSize: 16 }}>contact@ronohub.com</Typography>
               </Stack>
-              <Stack direction="row" spacing={1.25} alignItems="center">
+              <Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}>
                 <PhoneRoundedIcon sx={{ color: "#000000", fontSize: 20 }} />
                 <Typography sx={{ ...footerTextSx, fontSize: 16 }}>040-40261333</Typography>
               </Stack>
             </Stack>
 
-            <Stack direction="row" spacing={1} alignItems="center">
+            <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
               {socialLinks.map((item, index) => (
                 <IconButton
                   key={index}

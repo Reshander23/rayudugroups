@@ -1,7 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Using Inter as fallback since RM Neue font files are not available */
-/* If you have RM Neue font files, place them in src/styles/fonts/ and uncomment the @font-face declarations below */
+@font-face {
+  font-family: 'RM Neue';
+  src: url('../Assets/fonts/RM\ neue/RMNeueTRIAL-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RM Neue';
+  src: url('../Assets/fonts/RM\ neue/RMNeueTRIAL-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RM Neue';
+  src: url('../Assets/fonts/RM\ neue/RMNeueTRIAL-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
 
 /* Global Styles */
 * {
@@ -25,18 +43,9 @@ html {
 }
 
 /* Override Material-UI default font */
-.MuiTypography-root {
-  font-family: 'RM Neue', 'Inter', sans-serif !important;
-}
-
-.MuiButton-root {
-  font-family: 'RM Neue', 'Inter', sans-serif !important;
-}
-
-.MuiAccordionSummary-root {
-  font-family: 'Inter', sans-serif !important;
-}
-
+.MuiTypography-root,
+.MuiButton-root,
+.MuiAccordionSummary-root,
 .MuiAccordionDetails-root {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'RM Neue', 'Inter', sans-serif !important;
 }
